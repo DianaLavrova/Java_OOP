@@ -1,5 +1,8 @@
 package org;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Issue;
+import io.qameta.allure.Step;
 import org.base.BaseWebTest;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -45,6 +48,9 @@ public class NavigationWebTest extends BaseWebTest {
                 contentPage.getFooter()));
     }
 
+
+    @Issue("BUG-100")
+    @Description("Проверяем что доступен блог")
     @DisplayName("Блог")
     @Test
     public void posts() {

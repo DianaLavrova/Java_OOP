@@ -1,5 +1,6 @@
 package page;
 
+import io.qameta.allure.Step;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -34,6 +35,7 @@ public class ContentPage extends PageFactory {
         return navigation;
     }
 
+    @Step("Проверка имени страницы")
     public void checkNamePage(String expectedNamePage) {
         Assertions.assertEquals(expectedNamePage, namePage.getText());
     }
